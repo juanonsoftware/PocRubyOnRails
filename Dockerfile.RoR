@@ -1,0 +1,3 @@
+from ruby:alpine
+
+RUN apk --update add build-base && gem install rails && gem update --system
