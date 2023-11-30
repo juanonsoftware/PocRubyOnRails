@@ -1,0 +1,4 @@
+FROM mydockercity/rubyonrails:latest-alpine
+
+WORKDIR /usr/src/app
+
