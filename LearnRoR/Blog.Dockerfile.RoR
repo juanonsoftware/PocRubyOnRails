@@ -1,0 +1,7 @@
+FROM mydockercity/rubyonrails:latest
+
+WORKDIR /usr/src/app
+
+COPY ./Blog/Gemfile* .
+
+RUN bundle install
