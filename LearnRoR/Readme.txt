@@ -1,11 +1,11 @@
 - Start a container (Debian Ruby + RoR)
 
-docker run -it --rm -p 3000:3000 -v D:\Dev\Ruby\LearnRoR:/code mydockercity/rubyonrails /bin/bash
+docker run -it --rm -p 3000:3000 -v .\LearnRoR:/code mydockercity/rubyonrails /bin/bash
 
 
 - Start a container (Alpine Ruby + RoR)
 
-docker run -it --rm -p 3000:3000 -v D:\Dev\Ruby\LearnRoR:/code mydockercity/rubyonrails:latest-alpine /bin/sh
+docker run -it --rm -p 3000:3000 -v .\LearnRoR:/code mydockercity/rubyonrails:latest-alpine /bin/sh
 
 
 Next, cd to the code folder

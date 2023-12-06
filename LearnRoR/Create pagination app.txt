@@ -1,0 +1,47 @@
+Steps to create pagination
+
+- Start new container
+docker run -it --rm -p 3000:3000 -v .:/code mydockercity/rubyonrails /bin/bash
+
+- Generate a new app under the folder /code
+rails new demo_pagination --skip-git
+
+- Change to the new app folder demo_pagination
+
+- Start server
+rails s -b 0.0.0.0
+
+Open Docker Desktop / Exec tab to execute other commands
+
+- Generate a resource
+rails g scaffold Post title:string body:string
+
+- Run migrate database
+rails db:migrate
+
+- Create new posts on UI by accessing to http://localhost:3000/posts
+- Follow quick start here https://ddnexus.github.io/pagy/quick-start/
+
+- Modify Gemfile to add this
+gem 'pagy', '~> 6.2'
+
+- Download config file into config/initializers
+
+- Edit pagy.rb to set 
+Pagy::DEFAULT[:items]  = 2
+
+- Now restart rails
+
+- Refresh the page & check the log, we can see only two items listed
+
+- Edit posts_helper.rb to include the frontend method
+module PostsHelper
+	include Pagy::Frontend
+end
+
+
+- Edit erb file to display pages
+
+- Refresh the page again
+
+- To support bootstrap, following this https://ddnexus.github.io/pagy/docs/extras/bootstrap/

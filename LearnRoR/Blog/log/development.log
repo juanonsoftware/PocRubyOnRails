@@ -258,3 +258,233 @@ FOREIGN KEY ("article_id")
   [1m[36mActiveRecord::InternalMetadata Load (3.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/articles/4" for 172.20.0.1 at 2023-12-04 08:55:17 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (1.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 330.9ms | Allocations: 14235)
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 7.6ms | Allocations: 457)
+  Rendered articles/show.html.erb within layouts/application (Duration: 371.7ms | Allocations: 16950)
+  Rendered layout layouts/application.html.erb (Duration: 4438.8ms | Allocations: 101322)
+Completed 200 OK in 5134ms (Views: 4570.5ms | ActiveRecord: 49.2ms | Allocations: 127178)
+
+
+Started GET "/articles/4" for 172.20.0.1 at 2023-12-04 08:55:53 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (5.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 172.2ms | Allocations: 9039)
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 6.8ms | Allocations: 349)
+  Rendered articles/show.html.erb within layouts/application (Duration: 218.5ms | Allocations: 11251)
+  Rendered layout layouts/application.html.erb (Duration: 515.0ms | Allocations: 24191)
+Completed 200 OK in 686ms (Views: 526.5ms | ActiveRecord: 114.1ms | Allocations: 30401)
+
+
+Started GET "/articles/4" for 172.20.0.1 at 2023-12-04 08:56:00 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (2.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 36.2ms | Allocations: 6525)
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 7.6ms | Allocations: 377)
+  Rendered articles/show.html.erb within layouts/application (Duration: 86.8ms | Allocations: 8763)
+  Rendered layout layouts/application.html.erb (Duration: 334.5ms | Allocations: 21920)
+Completed 200 OK in 488ms (Views: 343.9ms | ActiveRecord: 102.1ms | Allocations: 28137)
+
+
+Started GET "/articles/4" for 172.20.0.1 at 2023-12-04 08:57:03 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (2.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 30.4ms | Allocations: 6518)
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 9.2ms | Allocations: 371)
+  Rendered articles/show.html.erb within layouts/application (Duration: 78.0ms | Allocations: 8748)
+  Rendered layout layouts/application.html.erb (Duration: 395.9ms | Allocations: 21689)
+Completed 200 OK in 541ms (Views: 404.9ms | ActiveRecord: 69.7ms | Allocations: 27883)
+
+
+Started GET "/articles" for 172.20.0.1 at 2023-12-04 08:57:08 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles" WHERE "articles"."status" = ?[0m  [["status", "public"]]
+  ↳ app/models/concerns/visible.rb:12:in `public_count'
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:6
+  Rendered articles/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1269)
+  Rendered layout layouts/application.html.erb (Duration: 83.1ms | Allocations: 3388)
+Completed 200 OK in 117ms (Views: 83.6ms | ActiveRecord: 1.4ms | Allocations: 3710)
+
+
+Started GET "/articles/new" for 172.20.0.1 at 2023-12-04 08:57:10 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#new as HTML
+Filter chain halted as #<Proc:0x00007fd17b0aede0 /usr/local/bundle/gems/actionpack-7.1.2/lib/action_controller/metal/http_authentication.rb:79> rendered or redirected
+Completed 401 Unauthorized in 22ms (ActiveRecord: 0.0ms | Allocations: 121)
+
+
+Started GET "/articles/new" for 172.20.0.1 at 2023-12-04 08:57:20 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 9.3ms | Allocations: 1408)
+  Rendered articles/new.html.erb within layouts/application (Duration: 26.9ms | Allocations: 1635)
+  Rendered layout layouts/application.html.erb (Duration: 100.0ms | Allocations: 3565)
+Completed 200 OK in 132ms (Views: 102.2ms | ActiveRecord: 0.0ms | Allocations: 3931)
+
+
+Started POST "/articles" for 172.20.0.1 at 2023-12-04 08:57:26 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"A", "body"=>"BCDF SDF DSF DSF", "status"=>"public"}, "commit"=>"Create Article"}
+Filter chain halted as #<Proc:0x00007fd17b0aede0 /usr/local/bundle/gems/actionpack-7.1.2/lib/action_controller/metal/http_authentication.rb:79> rendered or redirected
+Completed 401 Unauthorized in 21ms (ActiveRecord: 0.0ms | Allocations: 344)
+
+
+Started POST "/articles" for 172.20.0.1 at 2023-12-04 08:57:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "article"=>{"title"=>"A", "body"=>"BCDF SDF DSF DSF", "status"=>"public"}, "commit"=>"Create Article"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mArticle Create (3.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at", "status") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "A"], ["body", "BCDF SDF DSF DSF"], ["created_at", "2023-12-04 08:57:27.233338"], ["updated_at", "2023-12-04 08:57:27.233338"], ["status", "public"]]
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:20:in `create'
+Redirected to http://localhost:3000/articles/5
+Completed 302 Found in 35ms (ActiveRecord: 9.2ms | Allocations: 3398)
+
+
+Started GET "/articles/5" for 172.20.0.1 at 2023-12-04 08:57:27 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (3.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 5.4ms | Allocations: 1120)
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 5]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.3ms | Allocations: 150)
+  Rendered articles/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1982)
+  Rendered layout layouts/application.html.erb (Duration: 89.2ms | Allocations: 3941)
+Completed 200 OK in 118ms (Views: 90.6ms | ActiveRecord: 3.6ms | Allocations: 4579)
+
+
+Started GET "/articles/5" for 172.20.0.1 at 2023-12-04 08:57:30 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 1.7ms | Allocations: 1123)
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 5]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.3ms | Allocations: 149)
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1941)
+  Rendered layout layouts/application.html.erb (Duration: 79.4ms | Allocations: 3881)
+Completed 200 OK in 105ms (Views: 80.8ms | ActiveRecord: 1.3ms | Allocations: 4469)
+
+
+Started GET "/articles/5" for 172.20.0.1 at 2023-12-04 08:57:34 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 1.3ms | Allocations: 1118)
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 5]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.2ms | Allocations: 149)
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1936)
+  Rendered layout layouts/application.html.erb (Duration: 71.1ms | Allocations: 3873)
+Completed 200 OK in 93ms (Views: 72.7ms | ActiveRecord: 1.0ms | Allocations: 4461)
+
+
+Started GET "/articles/5" for 172.20.0.1 at 2023-12-04 08:57:35 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 1.5ms | Allocations: 1108)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 5]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.2ms | Allocations: 149)
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1926)
+  Rendered layout layouts/application.html.erb (Duration: 81.1ms | Allocations: 3860)
+Completed 200 OK in 104ms (Views: 82.3ms | ActiveRecord: 1.0ms | Allocations: 4448)
+
+
+Started GET "/articles/5" for 172.20.0.1 at 2023-12-04 08:57:37 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 1.3ms | Allocations: 1126)
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 5]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.2ms | Allocations: 149)
+  Rendered articles/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1944)
+  Rendered layout layouts/application.html.erb (Duration: 82.9ms | Allocations: 3870)
+Completed 200 OK in 106ms (Views: 84.0ms | ActiveRecord: 1.0ms | Allocations: 4459)
+
+
+Started DELETE "/articles/5/comments" for 172.20.0.1 at 2023-12-04 08:57:41 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [DELETE] "/articles/5/comments"):
+  
+Started GET "/articles/5" for 172.20.0.1 at 2023-12-04 08:57:41 +0000
+Cannot render console from 172.20.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering articles/show.html.erb within layouts/application
+  Rendered comments/_form.html.erb (Duration: 1.4ms | Allocations: 1117)
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 5]]
+  ↳ app/views/articles/show.html.erb:24
+  Rendered collection of comments/_comment.html.erb [1 times] (Duration: 0.3ms | Allocations: 149)
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1935)
+  Rendered layout layouts/application.html.erb (Duration: 81.6ms | Allocations: 3894)
+Completed 200 OK in 102ms (Views: 82.2ms | ActiveRecord: 1.0ms | Allocations: 4483)
+
+

@@ -1,0 +1,1018 @@
+Started GET "/" for 172.17.0.1 at 2023-12-06 08:54:28 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-7.1.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 374)
+Completed 200 OK in 537ms (Views: 108.2ms | ActiveRecord: 0.0ms | Allocations: 7870)
+
+
+Started GET "/" for 172.17.0.1 at 2023-12-06 08:56:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231206085634_create_posts.rb
+
+
+):
+  
+activerecord (7.1.2) lib/active_record/migration.rb:754:in `check_pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:643:in `block (2 levels) in call'
+activesupport (7.1.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activesupport (7.1.2) lib/active_support/file_update_checker.rb:95:in `execute_if_updated'
+activerecord (7.1.2) lib/active_record/migration.rb:650:in `block in call'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `synchronize'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 08:56:53 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231206085634_create_posts.rb
+
+
+):
+  
+activerecord (7.1.2) lib/active_record/migration.rb:754:in `check_pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:643:in `block (2 levels) in call'
+activesupport (7.1.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.2) lib/active_record/migration.rb:648:in `block in call'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `synchronize'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 08:56:57 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20231206085634_create_posts.rb
+
+
+):
+  
+activerecord (7.1.2) lib/active_record/migration.rb:754:in `check_pending_migrations'
+activerecord (7.1.2) lib/active_record/migration.rb:643:in `block (2 levels) in call'
+activesupport (7.1.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.2) lib/active_record/migration.rb:648:in `block in call'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `synchronize'
+activerecord (7.1.2) lib/active_record/migration.rb:640:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.8) lib/rack/method_override.rb:28:in `call'
+rack (3.0.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.2) lib/rails/engine.rb:529:in `call'
+puma (6.4.0) lib/puma/configuration.rb:272:in `call'
+puma (6.4.0) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.0) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.0) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.0) lib/puma/server.rb:443:in `process_client'
+puma (6.4.0) lib/puma/server.rb:241:in `block in run'
+puma (6.4.0) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (7.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2023-12-06 08:57:40.237974', '2023-12-06 08:57:40.237977') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20231206085634)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20231206085634') RETURNING "version"[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 08:57:46 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 41.4ms | Allocations: 1514)
+  Rendered layout layouts/application.html.erb (Duration: 2199.9ms | Allocations: 102936)
+Completed 200 OK in 2625ms (Views: 2170.2ms | ActiveRecord: 52.3ms | Allocations: 112920)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2023-12-06 08:58:04 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 227.9ms | Allocations: 5015)
+  Rendered posts/new.html.erb within layouts/application (Duration: 261.0ms | Allocations: 5303)
+  Rendered layout layouts/application.html.erb (Duration: 326.7ms | Allocations: 7233)
+Completed 200 OK in 403ms (Views: 328.8ms | ActiveRecord: 2.9ms | Allocations: 16527)
+
+
+Started POST "/posts" for 172.17.0.1 at 2023-12-06 08:58:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Post 1", "body"=>"Body 1"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mPost Create (2.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Post 1"], ["body", "Body 1"], ["created_at", "2023-12-06 08:58:12.129363"], ["updated_at", "2023-12-06 08:58:12.129363"]]
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 30ms (ActiveRecord: 8.4ms | Allocations: 3391)
+
+
+Started GET "/posts/1" for 172.17.0.1 at 2023-12-06 08:58:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (2.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 8.4ms | Allocations: 183)
+  Rendered posts/show.html.erb within layouts/application (Duration: 62.0ms | Allocations: 1316)
+  Rendered layout layouts/application.html.erb (Duration: 137.0ms | Allocations: 3242)
+Completed 200 OK in 198ms (Views: 138.3ms | ActiveRecord: 2.7ms | Allocations: 6195)
+
+
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 08:58:15 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 798)
+  Rendered layout layouts/application.html.erb (Duration: 86.3ms | Allocations: 2733)
+Completed 200 OK in 106ms (Views: 87.4ms | ActiveRecord: 0.6ms | Allocations: 2995)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2023-12-06 08:58:17 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 0.9ms | Allocations: 811)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 890)
+  Rendered layout layouts/application.html.erb (Duration: 63.5ms | Allocations: 2820)
+Completed 200 OK in 84ms (Views: 65.2ms | ActiveRecord: 0.0ms | Allocations: 3084)
+
+
+Started POST "/posts" for 172.17.0.1 at 2023-12-06 08:58:21 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Post 2", "body"=>"Body 2"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mPost Create (2.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Post 2"], ["body", "Body 2"], ["created_at", "2023-12-06 08:58:21.232715"], ["updated_at", "2023-12-06 08:58:21.232715"]]
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 24ms (ActiveRecord: 3.4ms | Allocations: 1929)
+
+
+Started GET "/posts/2" for 172.17.0.1 at 2023-12-06 08:58:21 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 554)
+  Rendered layout layouts/application.html.erb (Duration: 71.8ms | Allocations: 2483)
+Completed 200 OK in 95ms (Views: 73.4ms | ActiveRecord: 1.7ms | Allocations: 3077)
+
+
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 08:58:22 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 923)
+  Rendered layout layouts/application.html.erb (Duration: 77.2ms | Allocations: 2854)
+Completed 200 OK in 100ms (Views: 78.3ms | ActiveRecord: 0.6ms | Allocations: 3111)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2023-12-06 08:58:24 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 0.9ms | Allocations: 808)
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 887)
+  Rendered layout layouts/application.html.erb (Duration: 58.5ms | Allocations: 2818)
+Completed 200 OK in 77ms (Views: 60.4ms | ActiveRecord: 0.0ms | Allocations: 3078)
+
+
+Started POST "/posts" for 172.17.0.1 at 2023-12-06 08:58:29 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Post 3", "body"=>"Body 3"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mPost Create (2.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Post 3"], ["body", "Body 3"], ["created_at", "2023-12-06 08:58:29.846359"], ["updated_at", "2023-12-06 08:58:29.846359"]]
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/posts/3
+Completed 302 Found in 28ms (ActiveRecord: 3.9ms | Allocations: 1919)
+
+
+Started GET "/posts/3" for 172.17.0.1 at 2023-12-06 08:58:29 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 548)
+  Rendered layout layouts/application.html.erb (Duration: 63.0ms | Allocations: 2475)
+Completed 200 OK in 88ms (Views: 64.6ms | ActiveRecord: 2.0ms | Allocations: 3068)
+
+
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 08:58:31 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1058)
+  Rendered layout layouts/application.html.erb (Duration: 61.7ms | Allocations: 2989)
+Completed 200 OK in 80ms (Views: 62.6ms | ActiveRecord: 0.5ms | Allocations: 3247)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2023-12-06 08:58:33 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 1.3ms | Allocations: 814)
+  Rendered posts/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 895)
+  Rendered layout layouts/application.html.erb (Duration: 70.6ms | Allocations: 2826)
+Completed 200 OK in 93ms (Views: 72.3ms | ActiveRecord: 0.0ms | Allocations: 3085)
+
+
+Started POST "/posts" for 172.17.0.1 at 2023-12-06 08:58:37 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"Post 4", "body"=>"Body 4"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mPost Create (2.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "Post 4"], ["body", "Body 4"], ["created_at", "2023-12-06 08:58:38.034973"], ["updated_at", "2023-12-06 08:58:38.034973"]]
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 29ms (ActiveRecord: 4.5ms | Allocations: 1917)
+
+
+Started GET "/posts/4" for 172.17.0.1 at 2023-12-06 08:58:38 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:63:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 542)
+  Rendered layout layouts/application.html.erb (Duration: 65.9ms | Allocations: 2468)
+Completed 200 OK in 89ms (Views: 67.5ms | ActiveRecord: 1.7ms | Allocations: 3061)
+
+
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 08:58:39 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1164)
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | Allocations: 3095)
+Completed 200 OK in 82ms (Views: 64.7ms | ActiveRecord: 0.6ms | Allocations: 3352)
+
+
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 09:02:00 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 6.4ms | Allocations: 181)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 68.8ms | Allocations: 4632)
+  Rendered layout layouts/application.html.erb (Duration: 314.1ms | Allocations: 17662)
+Completed 200 OK in 396ms (Views: 273.7ms | ActiveRecord: 55.0ms | Allocations: 19216)
+
+
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 09:02:38 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mPost Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 5.6ms | Allocations: 179)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 31.9ms | Allocations: 3973)
+  Rendered layout layouts/application.html.erb (Duration: 298.7ms | Allocations: 16811)
+Completed 200 OK in 426ms (Views: 310.5ms | ActiveRecord: 86.4ms | Allocations: 19501)
+
+
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 09:02:58 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1190)
+  Rendered layout layouts/application.html.erb (Duration: 85.4ms | Allocations: 3117)
+Completed 200 OK in 108ms (Views: 85.7ms | ActiveRecord: 2.0ms | Allocations: 3749)
+
+
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 09:03:22 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  [1m[36mPost Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 9.4ms | Allocations: 219)
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 129.7ms | Allocations: 12001)
+  Rendered layout layouts/application.html.erb (Duration: 1026.5ms | Allocations: 46818)
+Completed 200 OK in 1380ms (Views: 1066.8ms | ActiveRecord: 83.4ms | Allocations: 58346)
+
+
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 09:06:03 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mPost Count (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 7.8ms | Allocations: 179)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 42.3ms | Allocations: 5253)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | Allocations: 5345)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 83.5ms | Allocations: 7966)
+
+
+  
+ActionView::Template::Error (Missing partial pagy/_nav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/code/demo_pagination/app/views"
+  * "/usr/local/bundle/gems/turbo-rails-1.5.0/app/views"
+  * "/usr/local/bundle/gems/actiontext-7.1.2/app/views"
+  * "/usr/local/bundle/gems/actionmailbox-7.1.2/app/views"
+):
+    11:   <% end %>
+    12: </div>
+    13: 
+    14: <%== render partial: 'pagy/nav', locals: {pagy: @pagy} %>
+    15: 
+    16: <%= link_to "New post", new_post_path %>
+  
+app/views/posts/index.html.erb:14
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 09:06:43 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mPost Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 8.2ms | Allocations: 179)
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 40.3ms | Allocations: 3898)
+  Rendered layout layouts/application.html.erb (Duration: 317.8ms | Allocations: 16908)
+Completed 200 OK in 444ms (Views: 329.8ms | ActiveRecord: 67.3ms | Allocations: 19508)
+
+
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:06:46 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 2]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1010)
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 2937)
+Completed 200 OK in 95ms (Views: 68.1ms | ActiveRecord: 1.8ms | Allocations: 3584)
+
+
+Started GET "/posts?page=1" for 172.17.0.1 at 2023-12-06 09:06:48 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1001)
+  Rendered layout layouts/application.html.erb (Duration: 67.9ms | Allocations: 2928)
+Completed 200 OK in 90ms (Views: 68.9ms | ActiveRecord: 1.3ms | Allocations: 3562)
+
+
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:06:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 2]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1013)
+  Rendered layout layouts/application.html.erb (Duration: 68.5ms | Allocations: 2959)
+Completed 200 OK in 93ms (Views: 69.4ms | ActiveRecord: 1.7ms | Allocations: 3607)
+
+
+Started GET "/posts?page=1" for 172.17.0.1 at 2023-12-06 09:07:06 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1010)
+  Rendered layout layouts/application.html.erb (Duration: 78.8ms | Allocations: 2944)
+Completed 200 OK in 101ms (Views: 79.9ms | ActiveRecord: 1.5ms | Allocations: 3591)
+
+
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:07:11 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 2]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1010)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 2937)
+Completed 200 OK in 96ms (Views: 72.3ms | ActiveRecord: 1.4ms | Allocations: 3572)
+
+
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:09:07 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 2]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 70.9ms | Allocations: 2943)
+Completed 200 OK in 93ms (Views: 71.9ms | ActiveRecord: 1.4ms | Allocations: 3576)
+
+
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:10:01 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 2]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 7.5ms | Allocations: 219)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 107.9ms | Allocations: 12151)
+  Rendered layout layouts/application.html.erb (Duration: 1036.1ms | Allocations: 46986)
+Completed 200 OK in 1308ms (Views: 1066.8ms | ActiveRecord: 67.9ms | Allocations: 58519)
+
+
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:10:20 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 1578)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 1677)
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 69.1ms | Allocations: 4329)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post %>
+    </p>
+  <% end %>
+</div>
+
+<%# Note the double equals sign "==" which marks the output as trusted and html safe: %>
+<%== pagy_nav(@pagy) %>
+<%== pagy_bootstrap_nav(@pagy, ...) %>
+
+<%= link_to "New post", new_post_path %>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Posts</h1>
+4:    
+5:    <div id="posts">
+6:      <% @posts.each do |post| %>
+7:        <%= render post %>
+8:        <p>
+9:          <%= link_to "Show this post", post %>
+10:        </p>
+11:      <% end %>
+12:    </div>
+13:    
+14:    <%# Note the double equals sign "==" which marks the output as trusted and html safe: %>
+15:    <%== pagy_nav(@pagy) %>
+16:    <%== pagy_bootstrap_nav(@pagy, ...) %>
+17:    
+18:    <%= link_to "New post", new_post_path %>
+  
+app/views/posts/index.html.erb:16: unexpected ...
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:10:50 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1188)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 1287)
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 105.2ms | Allocations: 3905)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Posts</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post %>
+    </p>
+  <% end %>
+</div>
+
+<%# Note the double equals sign "==" which marks the output as trusted and html safe: %>
+
+<%== pagy_bootstrap_nav(@pagy, ...) %>
+
+<%= link_to "New post", new_post_path %>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Posts</h1>
+4:    
+5:    <div id="posts">
+6:      <% @posts.each do |post| %>
+7:        <%= render post %>
+8:        <p>
+9:          <%= link_to "Show this post", post %>
+10:        </p>
+11:      <% end %>
+12:    </div>
+13:    
+14:    <%# Note the double equals sign "==" which marks the output as trusted and html safe: %>
+15:    
+16:    <%== pagy_bootstrap_nav(@pagy, ...) %>
+17:    
+18:    <%= link_to "New post", new_post_path %>
+  
+app/views/posts/index.html.erb:16: unexpected ...
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:17:01 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (54.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 2]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 9.3ms | Allocations: 181)
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 47.3ms | Allocations: 3883)
+  Rendered layout layouts/application.html.erb (Duration: 420.0ms | Allocations: 16895)
+Completed 200 OK in 591ms (Views: 438.6ms | ActiveRecord: 101.0ms | Allocations: 19257)
+
+
+Started GET "/posts?page=1" for 172.17.0.1 at 2023-12-06 09:17:08 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1031)
+  Rendered layout layouts/application.html.erb (Duration: 76.2ms | Allocations: 2958)
+Completed 200 OK in 98ms (Views: 77.4ms | ActiveRecord: 1.3ms | Allocations: 3606)
+
+
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:17:10 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 2]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1016)
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 2943)
+Completed 200 OK in 95ms (Views: 74.5ms | ActiveRecord: 1.1ms | Allocations: 3578)
+
+
+Started GET "/posts?page=1" for 172.17.0.1 at 2023-12-06 09:17:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mPost Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1019)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 2946)
+Completed 200 OK in 97ms (Views: 72.1ms | ActiveRecord: 1.8ms | Allocations: 3581)
+
+
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:17:12 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 2]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1022)
+  Rendered layout layouts/application.html.erb (Duration: 77.6ms | Allocations: 2949)
+Completed 200 OK in 100ms (Views: 78.4ms | ActiveRecord: 1.5ms | Allocations: 3584)
+
+
+Started GET "/posts?page=1" for 172.17.0.1 at 2023-12-06 09:17:14 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1013)
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 2940)
+Completed 200 OK in 108ms (Views: 86.5ms | ActiveRecord: 1.4ms | Allocations: 3575)
+
+
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:17:14 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 2]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1004)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 2931)
+Completed 200 OK in 92ms (Views: 72.4ms | ActiveRecord: 1.3ms | Allocations: 3566)
+
+
+Started GET "/posts?page=1" for 172.17.0.1 at 2023-12-06 09:17:15 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 989)
+  Rendered layout layouts/application.html.erb (Duration: 67.1ms | Allocations: 2916)
+Completed 200 OK in 88ms (Views: 68.0ms | ActiveRecord: 1.5ms | Allocations: 3551)
+
+
+Started GET "/posts?page=2" for 172.17.0.1 at 2023-12-06 09:17:16 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 2]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 995)
+  Rendered layout layouts/application.html.erb (Duration: 68.6ms | Allocations: 2922)
+Completed 200 OK in 91ms (Views: 69.5ms | ActiveRecord: 1.3ms | Allocations: 3557)
+
+
+Started GET "/posts/new" for 172.17.0.1 at 2023-12-06 09:17:19 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (Duration: 36.2ms | Allocations: 1965)
+  Rendered posts/new.html.erb within layouts/application (Duration: 64.3ms | Allocations: 2245)
+  Rendered layout layouts/application.html.erb (Duration: 134.2ms | Allocations: 4175)
+Completed 200 OK in 168ms (Views: 136.1ms | ActiveRecord: 0.0ms | Allocations: 4529)
+
+
+Started POST "/posts" for 172.17.0.1 at 2023-12-06 09:17:23 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"OK", "body"=>"Body 1"}, "commit"=>"Create Post"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+  [1m[36mPost Create (3.2ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?) RETURNING "id"[0m  [["title", "OK"], ["body", "Body 1"], ["created_at", "2023-12-06 09:17:23.498329"], ["updated_at", "2023-12-06 09:17:23.498329"]]
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:29:in `block in create'
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 39ms (ActiveRecord: 11.1ms | Allocations: 3321)
+
+
+Started GET "/posts/5" for 172.17.0.1 at 2023-12-06 09:17:23 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (4.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered posts/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 87.8ms | Allocations: 2720)
+Completed 200 OK in 152ms (Views: 89.9ms | ActiveRecord: 4.1ms | Allocations: 4826)
+
+
+Started GET "/posts" for 172.17.0.1 at 2023-12-06 09:17:24 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  [1m[36mPost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered posts/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1010)
+  Rendered layout layouts/application.html.erb (Duration: 95.4ms | Allocations: 2954)
+Completed 200 OK in 120ms (Views: 96.5ms | ActiveRecord: 1.0ms | Allocations: 3590)
+
+
+Started GET "/posts?page=3" for 172.17.0.1 at 2023-12-06 09:17:27 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mPost Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/controllers/posts_controller.rb:8:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 2], ["OFFSET", 4]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/_post.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 69.0ms | Allocations: 2809)
+Completed 200 OK in 91ms (Views: 70.1ms | ActiveRecord: 1.0ms | Allocations: 3444)
+
+
+Started GET "/posts/5" for 172.17.0.1 at 2023-12-06 09:17:29 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:65:in `set_post'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/_post.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 531)
+  Rendered layout layouts/application.html.erb (Duration: 75.2ms | Allocations: 2463)
+Completed 200 OK in 103ms (Views: 77.6ms | ActiveRecord: 0.6ms | Allocations: 3056)
+
+
