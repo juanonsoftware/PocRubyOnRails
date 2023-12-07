@@ -1,9 +1,10 @@
 puts "Hello World - using puts"
 
-printf "Hello Workd - using printf"
+printf "Hello World - using printf"
 
 =begin
 The below is trying with gets
+second line
 =end
 
 
