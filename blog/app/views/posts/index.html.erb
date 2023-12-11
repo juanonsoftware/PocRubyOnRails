@@ -9,6 +9,8 @@
       <%= link_to "Show this post", post %>
     </p>
   <% end %>
+  
+  <%== pagy_nav(@pagy) %>
 </div>
 
 <%= link_to "New post", new_post_path %>
