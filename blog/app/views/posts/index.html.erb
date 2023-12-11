@@ -2,15 +2,14 @@
 
 <h1>Posts</h1>
 
-<div id="posts">
+<div id="posts" class="row g-4 py-5 row-cols-1 row-cols-lg-3">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-  
-  <%== pagy_nav(@pagy) %>
+    <%= render post %>	
+  <% end %>  
+</div>
+
+<div>
+  <%== pagy_bootstrap_nav(@pagy) %>
 </div>
 
 <%= link_to "New post", new_post_path %>
