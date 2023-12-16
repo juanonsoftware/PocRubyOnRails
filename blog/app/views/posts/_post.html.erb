@@ -1,5 +1,7 @@
 <div id="<%= dom_id post %>" class="feature col">
-  <h3 class="fs-2 text-body-emphasis">Title: <%= post.title %></h3>
+  <h3 class="fs-2 text-body-emphasis">
+    Title: <%= post.title %> (<%= post.status %>)
+  </h3>
   <p>
     <%= post.body %>
   </p>
